@@ -63,5 +63,19 @@ tabsParent.onclick = (event) => {
     }
 
 }
+//weather
+
+const searchInput = document.querySelector('.cityName')
+const searchButton = document.querySelector('#search')
+const city = document.querySelector('.city')
+const temp = document.querySelector('.temp')
+
+//http://api.openweathermap.org/data/2.5/weather
+searchButton.onclick = () => {
+    fetch('http://api.openweathermap.org/data/2.5/weather?appid=e417df62e04d3b1b111abeab19cea714')
+    .then(response => response.json())
+    .then((data) =>
+        console.log(data)
+}
 
 
